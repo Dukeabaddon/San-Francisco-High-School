@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden font-inter">
+    <nav class="py-[16px] px-[20px] bg-darkBlue/80 text-white w-full flex items-center justify-between z-10 absolute">
+        <div class="flex items-center gap-2 z-50">
+            <img src="./img/sfhsfinale.png" alt="" class="w-16">
+            <h4 class="hidden md:flex">SAN FRANCISCO HIGH SCHOOL</h4>
+        </div>
+        <ul class="hidden md:flex gap-8 mx-auto">
+            <li class="hover:font-semibold"><a href="">HOME</a></li>
+            <li class="hover:font-semibold"><a href="">ABOUT US</a></li>
+            <li class="hover:font-semibold"><a href="">PROGRAMS</a></li>
+            <li class="hover:font-semibold"><a href="">GALLERY</a></li>
+        </ul>
+        <a href="" class="hidden md:flex px-[24px] py-[12px] rounded-[16px] text-black font-semibold bg-gray-400 hover:bg-gray-500 transition duration-500">
+            APPLY NOW
+        </a>
+        <button class="block md:hidden ml-3" onclick="openMenu()">
+            <img src="./icon/menu.png" alt="" class="w-6">
+        </button>
+
+        <!--for mobile menu-->
+        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 h-screen bg-darkBlue border transition duration-500 z-50">
+            <div class="absolute right-6 top-6 cursor-pointer" onclick="closeMenu()">
+                <img src="./icon/cross.png" alt="" srcset="" class="w-6">
+            </div>
+            <li class="hover:font-semibold"><a href="" onclick="closeMenu()">HOME</a></li>
+            <li class="hover:font-semibold"><a href="" onclick="closeMenu()">ABOUT US</a></li>
+            <li class="hover:font-semibold"><a href="" onclick="closeMenu()">PROGRAMS</a></li>
+            <li class="hover:font-semibold"><a href="" onclick="closeMenu()">GALLERY</a></li>
+        </ul>
+    </nav>
+
+<!--header-->
+    <div class="bg-[url(./img/sfhs-bg.jpg)] bg-no-repeat bg-cover bg-center w-full h-screen">
+        <div class="bg-black/50 w-full h-screen absolute"></div>
+        <div class="absolute pt-64 text-white px-[20px]">
+            <h4 class="font-bold text-xl">WELCOME TO</h4>
+            <h1 class="md:text-[120px] font-extrabold md:leading-[120px] text-[190%]">SAN FRANCISCO<br>HIGH SCHOOL</h1>
+            <a href="" class="rounded-[12px] bg-darkBlue md:px-[16px] md:py-[12px] px-[8px] py-[6px] text-sm flex items-center justify-center w-fit gap-3 md:mt-10 mt-3">READ MORE <img src="./icon/triangle.png" alt="" class="w-3"></a> 
+        </div>
+        
+    </div>
+
+<!--options-->
+<div class="relative md:-mt-[50px] mt-20">
+    <div class="grid sm:grid-cols-3 gap-4 sm:left-[10%] top-0 right-0 bottom-0 left-0 items-center justify-center absolute -mt-[50px] sm:-mt-[5px]">
+        <div class="md:w-[280px] md:h-[200px] w-[290px] h-[70px] bg-darkBlue flex items-center gap-8 text-white px-12 py-8 md:flex-col md:gap-6 md:px-16 md:py-16 cursor-pointer hover:-translate-y-2 duration-500">
+            <img src="./icon/book.png" alt="" class="w-12 md:w-[80px]">
+            <p>Programs</p>
+        </div>
+        <div class="md:w-[280px] md:h-[200px] w-[290px] h-[70px] bg-darkBlue flex items-center gap-8 text-white px-12 py-8 md:flex-col md:gap-6 md:px-16 md:py-16 cursor-pointer hover:-translate-y-2 duration-500">
+            <img src="./icon/school-icon.png" alt="" class="w-12 md:w-[80px]">
+            <p>School Tour</p>
+        </div>
+        <div class="md:w-[280px] md:h-[200px] w-[290px] h-[70px] bg-darkBlue flex items-center gap-8 text-white px-12 py-8 md:flex-col md:gap-6 md:px-16 md:py-16 cursor-pointer hover:-translate-y-2 duration-500">
+            <img src="./icon/computer-icon.png" alt="" class="w-12 md:w-[80px]">
+            <p>Apply Now</p>
+        </div>
+    </div>
+</div>
+
+<!--about us-->
+<div class="bg-[url(./img/students.jpg)] bg-no-repeat bg-cover bg-center w-full h-screen mt-[320px]">
+    <div class="bg-darkBlue/80 w-full h-screen absolute"></div>
+    <div class="grid sm:grid-cols-2 justify-items-center sm:justify-center sm:items-center sm:ml-[150px] ml-[20px] sm:mr-[52px] mr-[20px] absolute gap-12 sm:my-36 my-10">
+        <div>
+            <img src="./img/sfhsfinale.png" alt="" class="sm:w-[400px] w-33">
+        </div>
+        <div class="text-white">
+            <h4 class="sm:text-[24px] text-[16px] font-bold">SAN FRANCISCO HIGH SCHOOL <br>
+                PREPARING FOR STUDENTS FOR THE FUTURE</h4>
+                <p class="sm:text-[22px] text-[14px] mt-[15px]">
+                    San Francisco High School (SFHS) is a public educational
+                    institution located in Bago Bantay, Quezon City. It was founded 
+                    as the first annex of Quezon City High School on June 9, 1954,
+                    until it became an independent high school on Sept. 30, 1958.
+                    The school provides quality, fair, culture-based and complete
+                    basic education to produce graduates who are intellectually and
+                    technologically competent.
+                </p>
+        </div>
+    </div>
+</div>
+
+<!--programs-->
+<div class="text-center sm:my-[54px] my-[29px]">
+    <h3 class="sm:text-[40px] text-[24px] font-extrabold">PROGRAMS</h3>
+    <p class="sm:text-[22px] text-[12px]">Be college-ready with the knowledge, training, and preparation to pursue a degree, start a business, or gain employment.</p>
+</div>
+
+<!--programs options-->
+<div class="bg-[url(./img/sfhs-gate-blue.png)] sm:h-screen h-[772px] bg-no-repeat bg-cover bg-center w-full">
+    <div class="grid sm:grid-cols-3 sm:mx-[35px] sm:py-[122px] py-[65px] gap-[28px] sm:gap-[60px]">
+        <div class="bg-whiteGray sm:w-[408px] sm:h-[457px] h-[195px] w-[300px] rounded-xl relative flex sm:grid mx-[20px]">
+            <img src="./img/gas-students.jpg" alt="" class="sm:w-full sm:h-[254px] h-[195px] w-[164px] object-cover rounded-xl">
+            <div class="sm:mx-[30px] mx-[13px] sm:-mt-[64px]">
+                <h4 class="font-bold sm:text-[24px] text-[16px]">GAS</h4>
+                <p class="sm:text-[16px] text-[9.5px]">
+                a broad-based senior high School
+                program designed for students who
+                are still exploring their academic
+                interests and future careers.
+                </p>
+            </div>
+            <a href="" class="bg-buttonGreen sm:p-[10px] px-[6px] py-[4px] text-[8px] sm:text-[16px] bottom-2 right-2 rounded-2xl absolute sm:right-3 hover:font-bold hover:-translate-y-1 duration-500 hover:bg-buttonHover">READ MORE</a>
+        </div>
+        <div class="bg-whiteGray sm:w-[408px] sm:h-[457px] h-[195px] w-[300px] rounded-xl relative flex sm:grid mx-[20px]">
+            <img src="./img/humss-student.jpg" alt="" class="sm:w-full sm:h-[254px] h-[195px] w-[164px] object-cover rounded-xl">
+            <div class="sm:mx-[30px] mx-[13px] sm:-mt-[64px]">
+                <h4 class="font-bold sm:text-[24px] text-[16px]">HUMMS</h4>
+                <p class="sm:text-[16px] text-[9.5px]">
+                    The HUMSS track equips students 
+                    with the knowledge and skills to
+                    become effective communicators,
+                    critical thinkers, and responsible...
+                </p>
+            </div>
+            <a href="" class="bg-buttonGreen sm:p-[10px] px-[6px] py-[4px] text-[8px] sm:text-[16px] bottom-2 right-2 rounded-2xl absolute sm:right-3 hover:font-bold hover:-translate-y-1 duration-500 hover:bg-buttonHover">READ MORE</a>
+        </div>
+        <div class="bg-whiteGray sm:w-[408px] sm:h-[457px] h-[195px] w-[300px] rounded-xl relative flex sm:grid mx-[20px]">
+            <img src="./img/stem-students.jpg" alt="" class="sm:w-full sm:h-[254px] h-[195px] w-[164px] object-cover rounded-xl">
+            <div class="sm:mx-[30px] mx-[13px] sm:-mt-[64px]">
+                <h4 class="font-bold sm:text-[24px] text-[16px]">STEM</h4>
+                <p class="sm:text-[16px] text-[9.5px]">
+                    embark on a journey of discovery,
+                    learning to think critically, analyze
+                    information, and collaborate 
+                    effectively. You'll be at the forefront...
+                </p>
+            </div>
+            <a href="" class="bg-buttonGreen sm:p-[10px] px-[6px] py-[4px] text-[8px] sm:text-[16px] bottom-2 right-2 rounded-2xl absolute sm:right-3 hover:font-bold hover:-translate-y-1 duration-500 hover:bg-buttonHover">READ MORE</a>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="bg-darkBlue sm:h-[200px] h-[215px] w-full text-white text-start sm:flex items-center justify-between sm:mt-[167px] sm:py-[110px]">
+    <ul class="flex flex-col sm:mx-[60px] sm:gap-[22px] gap-[20px] sm:text-[16px] text-[12px] py-[51px] p-[10px]">
+        <li class="font-medium sm:text-[18px] text-[12px]">SAN FRANCISCO HIGH SCHOOL</li>
+      <li class="flex items-center">
+        <img src="./icon/location.png" alt="" class="mr-2 sm:w-[15px] w-[10px]">
+        Location: 1 Misamis St, Bago Bantay, Quezon City, Metro Manila
+      </li>
+      <li class="flex items-center">
+        <img src="./icon/phone.png" alt="" class="mr-2 sm:w-[20px] w-[15px]">
+        Phone : +639763008041
+      </li>
+    </ul>
+  </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>
